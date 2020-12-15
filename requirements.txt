@@ -1,0 +1,5 @@
+azure-cognitiveservices-language-luis
+azure-functions
+black
+pandas
+pytest

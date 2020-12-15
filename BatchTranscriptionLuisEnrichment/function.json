@@ -1,0 +1,26 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "inputblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "transcriptions/{blobname}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "path": "transcriptions-enriched/{blobname}",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    },
+    {
+      "name": "erroroutputblob",
+      "type": "blob",
+      "path": "transcriptions-failed/{blobname}",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    }
+  ]
+}
